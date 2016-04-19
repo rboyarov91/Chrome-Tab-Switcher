@@ -12,7 +12,7 @@
           "tabs"
         ],
 
-	"description" : "Change tabs using the arrow keys",
+	"description" : "Allows to set custon key bindings to change tabs to the right and left",
 	"commands" : {
 		"switch-tab-right": {
 		"description": "move current tab to the right",
