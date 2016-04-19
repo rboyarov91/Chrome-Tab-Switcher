@@ -5,6 +5,10 @@ chrome.commands.onCommand.addListener( function(command) {
 	    console.log("switching to the right");
 	    chrome.tabs.query({currentWindow: true},
 		    function(tabArray){
+		    	if (tabArray[0].active) {
+		    		chrome.tabs.update(tabArray[tabArray.length - 1].id, {"active" : true});
+		    		return;
+		    	}
 		    	currentFound = false;
 		    	l = tabArray.length - 1;
 		    	console.log('length: ' + l);
@@ -28,6 +32,10 @@ chrome.commands.onCommand.addListener( function(command) {
 		    function(tabArray){
 		    	currentFound = false;
 		    	for (tab in tabArray) {
+		    		if (tabArray[tabArray.length - 1].active) {
+		    			chrome.tabs.update(tabArray[0].id, {"active" : true});
+		    			return;
+		    		}
 		    		console.log('checking tab:' + tab + 'is active? ' + tabArray[tab].active);
 		    		if (tabArray[tab].active) {
 		    			currentFound = true;
