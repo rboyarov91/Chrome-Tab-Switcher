@@ -15,18 +15,10 @@
 	"description" : "Change tabs using the arrow keys",
 	"commands" : {
 		"switch-tab-right": {
-			"suggested_key": {
-				"default": "Ctrl+Right",
-				"mac": "MacCtrl+Right"
-			},
 		"description": "move current tab to the right",
 		"global": true
 		},
 		"switch-tab-left": {
-			"suggested_key": {
-				"default": "Ctrl+Left",
-				"mac": "MacCtrl+Left"
-			},
 		"description": "move current tab to the left",
 		"global": true
 		}
